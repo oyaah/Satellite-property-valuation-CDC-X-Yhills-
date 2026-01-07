@@ -1,0 +1,189 @@
+# ============================================================================
+# Satellite Property Valuation - .gitignore
+# ============================================================================
+
+# Python
+# ------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# --------------------
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+# ----------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.jupyter/
+*.ipynb_checkpoints
+
+# Data Files (DO NOT COMMIT LARGE DATASETS)
+# ------------------------------------------
+# Raw data files
+*/data/raw/*.xlsx
+*/data/raw/*.csv
+*/data/raw/*.xls
+*/data/raw/train_images_19/
+*/data/raw/train_images_20/
+*/data/test_data_images/
+
+# Processed data
+*/data/processed/*.csv
+*/data/processed/*.pkl
+*/data/processed/*.npy
+*/data/processed/*.npz
+
+# Predictions
+*/data/predictions/*.csv
+
+# MLflow & Experiment Tracking
+# -----------------------------
+mlruns/
+*/reports/mlruns/
+.mlflow/
+mlflow.db
+
+# Model Checkpoints (KEEP ONLY BEST MODELS)
+# ------------------------------------------
+# Exclude all checkpoints during training
+checkpoint_*.pth
+epoch_*.pth
+last.pth
+
+# MLflow artifact models (too many duplicates)
+*/reports/mlruns/*/models/*/artifacts/
+
+# Explainability Visualizations (TOO LARGE - 4GB+)
+# -------------------------------------------------
+# Keep only a sample, exclude the full validation set
+*/Explainability/validation/
+# Keep test explainability (smaller)
+ */Explainability/test/  <- This will be included
+
+# Logs
+# ----
+*.log
+logs/
+*/logs/
+*.out
+*.err
+
+# IDE & Editor
+# ------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS
+# --
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary Files
+# ---------------
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Reports & Visualizations (Exclude large outputs)
+# -------------------------------------------------
+*/reports/*.png
+*/reports/*.jpg
+*/reports/*.pdf
+# Keep README and markdown files
+!*/reports/README.md
+
+# Outputs
+# -------
+outputs/*.png
+outputs/*.jpg
+!outputs/sample_predictions.png
+!outputs/metrics_summary.png
+
+# Package Management
+# ------------------
+*.whl
+*.tar.gz
+
+# Testing
+# -------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation Build
+# -------------------
+docs/_build/
+site/
+
+# Mypy
+# ----
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+# ----
+.pyre/
+
+# Environment Variables
+# ---------------------
+.env
+.env.local
+.env.*.local
+
+# ============================================================================
+# PROJECT-SPECIFIC INCLUSIONS (Keep these)
+# ============================================================================
+# Best model checkpoints (final trained models - should be kept)
+!*/outputs/best_model.pth
+!*/models/best_*.pth
+
+# Sample explainability images (keep a few examples)
+!*/Explainability/test/*.png
+!*/Explainability/sample_*.png
+
+# Documentation
+!README.md
+!*/README.md
+!SETUP.md
+!ARCHITECTURE.md
