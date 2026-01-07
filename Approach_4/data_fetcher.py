@@ -242,16 +242,11 @@ def main():
     # Check if token is set
     if MAPBOX_TOKEN == "YOUR_MAPBOX_ACCESS_TOKEN_HERE":
         print("❌ ERROR: Please set your Mapbox access token!")
-        print("\n📝 To get a token:")
-        print("   1. Go to https://account.mapbox.com/")
-        print("   2. Sign up or log in")
-        print("   3. Go to 'Access tokens' page")
-        print("   4. Copy your default public token or create a new one")
-        print("   5. Replace 'YOUR_MAPBOX_ACCESS_TOKEN_HERE' in this script\n")
+       
         return
 
     # Zoom level configuration (optimized for zoom 19)
-    ZOOM_LEVELS = [19]  # 75m area coverage - property details
+    ZOOM_LEVELS = [20]  # 75m area coverage - property details
     
     # Image settings
     IMAGE_SIZE = 1280  # 640x640 pixels (can go up to 1280)
@@ -261,8 +256,8 @@ def main():
     MAX_WORKERS = 30  # Parallel download threads (10-50 recommended, 30 is optimal)
 
     # Paths
-    INPUT_FILE = '/Users/yashbansal/Documents/cdc/Approach_3/data/raw/train.xlsx'
-    OUTPUT_DIR = '/Users/yashbansal/Documents/cdc/Approach_3/data/raw/train_images_19'
+    INPUT_FILE = '/Users/yashbansal/Documents/cdc/Approach_4/data/raw/train.xlsx'
+    OUTPUT_DIR = '/Users/yashbansal/Documents/cdc/Approach_4/data/raw/train_images_20'
 
     # ========== LOAD DATA ==========
 

@@ -171,12 +171,12 @@ dmypy.json
 .env.local
 .env.*.local
 
-# ============================================================================
-# PROJECT-SPECIFIC INCLUSIONS (Keep these)
-# ============================================================================
-# Best model checkpoints (final trained models - should be kept)
-!*/outputs/best_model.pth
-!*/models/best_*.pth
+
+*/outputs/best_model.pth
+*/models/best_*.pth
+*.pth
+*.pt
+*.ckpt
 
 # Sample explainability images (keep a few examples)
 !*/Explainability/test/*.png
