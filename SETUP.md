@@ -73,9 +73,9 @@ Approach_4/
     └── raw/
         ├── train.xlsx              # Training data (download separately)
         ├── test.xlsx               # Test data (download separately)
-        └── train_images_19/        # Satellite images (download separately)
-            ├── 1000102_z19.jpg
-            ├── 1001200050_z19.jpg
+        └── train_images_20/        # Satellite images (download separately)
+            ├── 1000102_z20.jpg
+            ├── 1001200050_z20.jpg
             └── ... (19,000+ images)
 ```
 
