@@ -259,7 +259,7 @@ tqdm>=4.65.0
 jupyter>=1.0.0
 openpyxl>=3.1.0
 
-# For Approach 1 only
+
 xgboost>=2.0.0
 lightgbm>=4.0.0
 catboost>=1.2.0
@@ -267,6 +267,3 @@ catboost>=1.2.0
 
 ---
 
-## License
-
-MIT License - CDC X Yhills Competition 2025-26
