@@ -10,8 +10,8 @@ from sklearn.model_selection import train_test_split
 from pathlib import Path
 import joblib
 
-from config import *
-from utils import *
+from src.config import *
+from src.utils import *
 
 def match_image_by_latlong(row, images_dir, image_lookup):
     """

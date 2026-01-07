@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from pathlib import Path
 import pandas as pd
 
-from config import *
+from src.config import *
 
 def set_seed(seed=42):
     """Set random seeds for reproducibility"""
