@@ -23,7 +23,7 @@ Dataset: King County, Washington housing data with ~13,000 training properties a
 | **Approach 4** | EfficientNet-V2-S + FPN + CBAM (Multimodal) | $143,495 | 0.8182 | Best multimodal approach |
 | **Approach 1** | Late Fusion (XGBoost/LightGBM/CatBoost ensemble) | $98,019 | 0.9152 | Best overall but not truly multimodal |
 | **Approach 3** | ResNet-50 + Dual Zoom (19+20) + Cross-Attention | $134,190 | 0.8210 | Too computationally expensive |
-| **Approach 2** | EfficientNet-B1 + Transformer + Cross-Attention | $141,553 | 0.7931 | Underfitting issues |
+| **Approach 2** | EfficientNet-B1 + Transformer + Cross-Attention | $149,553 | 0.7931 | Underfitting issues |
 
 ---
 
@@ -227,14 +227,14 @@ End-to-end attention model with tabular features attending to image feature maps
 ### Results
 ```
 Best (Epoch 24):
-  Val RMSE: $141,553
-  Val R²:   0.8231
+  Val RMSE: $149,553
+  Val R²:   0.7931
   Val MAE:  $93,069
-  Val MAPE: 19.09%
+ 
 ```
 
 ### Why Not Final Solution
-Underfitting - the model had insufficient capacity or the attention mechanism didn't learn effectively. Attention entropy was high (3.25), indicating diffuse attention rather than focused regions.
+Underfitting - the model had insufficient capacity or the attention mechanism didn't learn effectively. Attention entropy was high (3.25), indicating diffuse attention rather than focused regions,training R square plateud at 0.6875
 
 ### Files
 ```
